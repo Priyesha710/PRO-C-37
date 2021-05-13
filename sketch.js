@@ -23,5 +23,12 @@ function draw(){
   if(gameState == 1){
     clear();
     quizObj.end();
+    var resetButton = createButton("reset");
+    resetButton.mousePressed(() => {
+        quizObj.updateState(0);
+        contestantObj.updateCount(0);
+        var contestantsInfoRef = database.ref('contestants');
+        contestantsInfoRef.remove();
+    });
   }
 }
