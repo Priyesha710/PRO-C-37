@@ -24,6 +24,7 @@ function draw(){
     clear();
     quizObj.end();
     var resetButton = createButton("reset");
+    resetButton.position(100,400);
     resetButton.mousePressed(() => {
         quizObj.updateState(0);
         contestantObj.updateCount(0);
